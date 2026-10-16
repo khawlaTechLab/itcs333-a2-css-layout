@@ -5,14 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ITCS333 A2 — Course Portal</title>
  <link rel="stylesheet" href="css/style.css">
-  <!--
-    DESIGN SPEC for css/style.css (grader checks these):
-      - #site-header: padding at least 16px, a visible border-bottom
-      - .card: padding at least 12px, a visible border, margin or grid gap
-      - .card-grid: display grid or flex; gap at least 16px; 3 columns on desktop
-      - form inputs: padding at least 6px; a :focus style (e.g. outline or border-color change)
-      - @media (max-width: 700px): .card-grid becomes a single column
-  -->
+ #site-header {
+    padding: 16px;
+    border-bottom: 2px solid #ccc;
+}
+.main-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.content-section {
+    margin: 20px 0;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.weight {
+    font-weight: bold;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary {
+    padding: 10px;
+    border: 1px solid #2563eb;
+    cursor: pointer;
+}
+
+.site-footer {
+    margin-top: 24px;
+    padding: 16px;
+    border-top: 1px solid #ccc;
+}
+
+@media (max-width: 700px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </head>
 <body>
   <header id="site-header">
